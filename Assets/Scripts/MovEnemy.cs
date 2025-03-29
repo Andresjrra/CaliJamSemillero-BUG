@@ -1,16 +1,22 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MovEnemy : MonoBehaviour
 {
-    public Transform player;  
-    public float speed = 2f;  
+    public Transform player;
+    public float speed = 2f;
 
     private Rigidbody2D rb;
     private Vector2 movement;
 
+    private GameOverManager gameOverManager;
+    private bool gameOverActivado = false; // Variable para evitar múltiples activaciones
+
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();  
+        rb = GetComponent<Rigidbody2D>();
+
+        gameOverManager = FindFirstObjectByType<GameOverManager>();
     }
 
     void Update()
@@ -24,6 +30,16 @@ public class MovEnemy : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.linearVelocity = movement * speed; 
+        rb.velocity = movement * speed; // Corregido: 'linearVelocity' no existe
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player") && !gameOverActivado) 
+        {
+            gameOverActivado = true; // Evita múltiples activaciones
+            gameOverManager.ActivarGameOverPanel();
+            Debug.Log("Game Over Activado"); // Verifica en la consola si se llama correctamente
+        }
     }
 }

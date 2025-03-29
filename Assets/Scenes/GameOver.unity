@@ -201,7 +201,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 83021608}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 727124172}
+        m_TargetAssemblyTypeName: GameOverManager, Assembly-CSharp
+        m_MethodName: VolverAlMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &83021608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -527,6 +539,7 @@ GameObject:
   - component: {fileID: 727124171}
   - component: {fileID: 727124170}
   - component: {fileID: 727124169}
+  - component: {fileID: 727124172}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -619,6 +632,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &727124172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727124167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1d55c7b6e7455547b6247733566979c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &854989812
 GameObject:
   m_ObjectHideFlags: 0
@@ -701,7 +726,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 854989815}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 727124172}
+        m_TargetAssemblyTypeName: GameOverManager, Assembly-CSharp
+        m_MethodName: SalirDelJuego
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &854989815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1173,7 +1210,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2012186583}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 727124172}
+        m_TargetAssemblyTypeName: GameOverManager, Assembly-CSharp
+        m_MethodName: ReiniciarNivel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2012186583
 MonoBehaviour:
   m_ObjectHideFlags: 0
